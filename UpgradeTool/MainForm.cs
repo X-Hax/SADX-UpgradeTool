@@ -153,13 +153,11 @@ namespace UpgradeTool
 				}
 
 				var wc = new HttpClient();
-				//var release = await GetLatestReleaseNewManager(wc);
+				var release = await GetLatestReleaseNewManager(wc);
 
-				var release = "https://github.com/Sora-yx/sadx-mod-loader/releases/download/v.0.1/SAModManager.zip";
 				if (release == null)
 				{
-
-					//release = Environment.Is64BitOperatingSystem ? "https://github.com/X-Hax/SA-Mod-Manager/releases/latest/download/release_x64.zip" : "https://github.com/X-Hax/SA-Mod-Manager/releases/latest/download/release_x86.zip";
+					release = Environment.Is64BitOperatingSystem ? "https://github.com/X-Hax/SA-Mod-Manager/releases/latest/download/release_x64.zip" : "https://github.com/X-Hax/SA-Mod-Manager/releases/latest/download/release_x86.zip";
 				}
 
 				DialogResult result = DialogResult.OK;
